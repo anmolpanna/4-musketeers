@@ -1,0 +1,51 @@
+Statement of Work
+Data Requirements:
+
+	The main data requirements for this project is comprised of historical data from games played and the specifics of every match viz. 
+1.	Home Goals
+2.	Away goals
+3.	Team form
+4.	Team line up
+5.	Team formation
+6.	Team gameplay
+7.	Match stadium
+8.	Match referee
+9.	Player attributes
+10.	 Match stats
+11.	Bookmaker’s odds for every match
+12.	FIFA Stats
+
+Assumptions: We assume the NULL values to be set to 0, the data is normalized, no player injuries, players age is optimal and no fixed matches.
+Constraints: The features extracted and excluded the remainder of features, monotonicity of predicted outcome and feature interactions. 
+Limitations: The limitations for this dataset is if a player is included in the team and we don't have the stats of the player or it may be his debut then it will be difficult to evaluate team and result probability. 
+
+Data Needs
+Data that is needed for our solution to work is understanding goal prediction, team dynamics such as away or home, player attributes and team line up.
+Data Creation
+      Data that must be created with regards to the type of passes that were made in game. Having passes data would allow our models to better predict the number of expected goals a team should have scored in a match.
+Unattainable Data
+As away and home goals becomes key feature, we also need to know how many goals a team scored against a team when they play at home or away. We also require who are all the players that involved in team whey they won and lost. These are the features which we are unable to find.
+
+Data Evaluation
+When we consider player attributes, we do not require goals scored attribute for goalkeeper or tackles for forward.  These are the unnecessary attributes. We don’t look at team leagues like whether the team is from England or Spain I.e.  Table – League, Attribute – name. We also don’t require players birthday, height, weight to achieve solution. 
+In contrast, we would consider team dynamics such as formation, past gameplay history and line up since these features would accurately assist in predicting goal predictions as well as geographical positions on the field, we could potentially extrapolate angles and create new columns or features that would further increase predictions.
+Dataset:
+	The dataset being used is “European Soccer Database” has been acquired from Kaggle (https://www.kaggle.com/hugomathien/soccer) and data.world (https://data.world/data-society/european-soccer-data) which contains,
+•	+25,000 matches
+•	+10,000 players
+•	11 European Countries with their lead championship
+•	Seasons 2008 to 2016
+•	Players and Teams' attributes sourced from EA Sports' FIFA video game series, including the weekly updates
+•	Team line up with squad formation (X, Y coordinates)
+•	Betting odds from up to 10 providers
+•	Detailed match events (goal types, possession, corner, cross, fouls, cards etc...) for +10,000 matches.
+
+Methodology and Testing Procedures :
+
+Methodology that this project adopted consisted of Data Collection, Data Preparation, Feature Selection, Data Segregation and then Model training and Evaluation. Data Collected from source above mentioned was explored, transformed and then fitted to models. Methodology behind feature selection are divided into two main groups which are static; based on individual teams and dynamic which are correlated by both teams. The Feature selection is as per our Data requirements. Furthermore, combining several algorithms has the potential to theoretically significantly improve predictive accuracy. From the data which has been obtained contains several key features which have a high correlation between them which can be observed from the heatmap. Data will be divided in a ratio of 8:2; 80% for training the model and 20% for testing it. The algorithms that will be used in tandem are Random Forest, KNN, SVM Gaussian Naïve Bayes, XGBoost, AdaBoost to better help with classification and clustering. Let us consider the stacking techniques for building ensemble of predictive models. In such an approach, the results of predictions on the validation set are treated as input regressors for the next level models. As the next level model, we can consider a linear model or another type of a machine- learning algorithm, e.g., RandomForest or GaussianNB. Yezus (2014) observed individual algorithms such as Random Forest, K nearest neighbors, logistic regression and support vector machine to assist with classifying team matches and outcome. Yezus reported 60% accuracy but considered a threshold of 70% to be considered successful. Fenton et al. (2006) used Bayesian networks, decision tree learner; MC4 and K-nearest neighbor to predict the outcome of Tottenham Hotspur Football Club matches which resulted with Bayesian networks demonstrating better predictive accuracy when using separate training and test data but when using the same training and test data for the whole season, the
+learners performed better than KNN. Finally, Python will be used as the main software programming language along with libraries such as Numpy, Pandas, Sklearn, seaborn and Matplotlib. The environment used to demonstrate code is Jupyter Notebook/Google Colab for usability to share code and launch specific blocks of functions.
+
+Notebook Link :
+
+
+
