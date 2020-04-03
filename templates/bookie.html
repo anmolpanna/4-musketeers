@@ -7,11 +7,9 @@
     <title>Prediction</title>
 
     <!-- Font Icon -->
-    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
-    <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
-
+   
     <!-- Main css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
 </head>
 <body>
 
@@ -20,12 +18,50 @@
         <div class="container">
             <div class="signup-content">
                 <div class="signup-img">
-                    <img src="images/form-img.jpg" alt="">
+                    <img src="static/images/form-img.jpg" alt="">
                     <div class="signup-img-content">
                         <h2>Predictions for the English Premier League </h2>
                         <p></p>
                     </div>
+    
                 </div>
+                <form action="#">
+                 <label for="cars">Home:</label>
+                 <select id="cars" name="cars">
+  <option value="volvo">Liverpol</option>
+  <option value="saab">Man. city</option>
+  <option value="fiat">Leicester city</option>
+  <option value="audi">Chelsea</option>
+  <option value="volvo">Man. United</option>
+  <option value="saab">Wolves</option>
+  <option value="fiat">Sheffield United</option>
+  <option value="audi">Tottenham</option>
+  <option value="fiat">Arsenal</option>
+  <option value="audi">Burnley</option>
+    <option value="fiat">Crystal Palace</option>
+  <option value="audi">NewCastle</option>
+</select> 
+<label for="cars">Away:</label>
+                 <select id="cars" name="cars">
+  <option value="volvo">Liverpol</option>
+  <option value="saab">Man. city</option>
+  <option value="fiat">Leicester city</option>
+  <option value="audi">Chelsea</option>
+  <option value="volvo">Man. United</option>
+  <option value="saab">Wolves</option>
+  <option value="fiat">Sheffield United</option>
+  <option value="audi">Tottenham</option>
+  <option value="fiat">Arsenal</option>
+  <option value="audi">Burnley</option>
+    <option value="fiat">Crystal Palace</option>
+  <option value="audi">NewCastle</option>
+</select> 
+</form>
+   
+
+ 
+
+
                 <div class="signup-form">
                     <form action='/predict' method="post" class="register-form" id="register-form">
                         <div class="form-row">
@@ -96,7 +132,7 @@
                             </div>
                         </div>
                         
-                        <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+                        <button type="submit" class="btn-large waves-effect waves-light orange">Results</button>
                     </form>
                 </div>
                 
@@ -108,11 +144,11 @@
     </div>
 
     <!-- JS -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/nouislider/nouislider.min.js"></script>
-    <script src="vendor/wnumb/wNumb.js"></script>
-    <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/nouislider/nouislider.min.js"></script>
+    <script src="static/vendor/wnumb/wNumb.js"></script>
+    <script src="static/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="static/vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="static/js/main.js"></script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
